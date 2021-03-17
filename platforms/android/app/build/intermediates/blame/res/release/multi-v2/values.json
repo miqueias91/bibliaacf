@@ -1,0 +1,98 @@
+{
+    "logs": [
+        {
+            "outputFile": "/var/www/app/android/bibliaacf/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/28b8987becfeb51e27f7d4b3045ef0ab/play-services-ads-lite-11.0.4/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,14",
+                        "startColumns": "0,0",
+                        "startOffsets": "167,661",
+                        "endLines": "11,20",
+                        "endColumns": "8,20",
+                        "endOffsets": "560,836"
+                    },
+                    "to": {
+                        "startLines": "37,45",
+                        "startColumns": "4,4",
+                        "startOffsets": "3557,3955",
+                        "endLines": "44,51",
+                        "endColumns": "8,20",
+                        "endOffsets": "3950,4130"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/5bddbffea062ec858fe0545538432c3c/play-services-basement-11.0.4/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "276,439",
+                        "endColumns": "63,166",
+                        "endOffsets": "339,605"
+                    },
+                    "to": {
+                        "startLines": "10,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "776,1888",
+                        "endColumns": "67,166",
+                        "endOffsets": "839,2050"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/6190186c58d59886499335c11ecffecf/play-services-base-11.0.4/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,32,45",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "215,301,377,463,549,625,702,778,951,1052,1233,1354,1457,1637,1756,1855,2043,2144,2325,2446,2621,2765,2824,2882,3052,3363",
+                        "endLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,44,63",
+                        "endColumns": "85,75,85,85,75,76,75,75,100,180,120,102,179,118,98,187,100,180,120,174,143,58,57,74,20,20",
+                        "endOffsets": "300,376,462,548,624,701,777,853,1051,1232,1353,1456,1636,1755,1854,2042,2143,2324,2445,2620,2764,2823,2881,2956,3362,3775"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,52,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,195,275,365,455,535,616,696,964,1069,1250,1375,1482,1662,1785,2055,2243,2348,2529,2654,2829,2977,3040,3102,4135,4450",
+                        "endLines": "2,3,4,5,6,7,8,9,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,64,83",
+                        "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,102,187,104,180,124,174,147,62,61,78,20,20",
+                        "endOffsets": "190,270,360,450,530,611,691,771,1064,1245,1370,1477,1657,1780,1883,2238,2343,2524,2649,2824,2972,3035,3097,3176,4445,4862"
+                    }
+                },
+                {
+                    "source": "/var/www/app/android/bibliaacf/platforms/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "170,55,111",
+                        "endColumns": "63,55,58",
+                        "endOffsets": "229,106,165"
+                    },
+                    "to": {
+                        "startLines": "11,12,30",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "844,908,3181",
+                        "endColumns": "63,55,58",
+                        "endOffsets": "903,959,3235"
+                    }
+                },
+                {
+                    "source": "/home/miqueias/.gradle/caches/transforms-2/files-2.1/97ada37cb2fc45718d7cd58b64385912/play-services-ads-11.0.4/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "170,208,281,315,350,399",
+                        "endColumns": "37,72,33,34,48,63",
+                        "endOffsets": "207,280,314,349,398,462"
+                    },
+                    "to": {
+                        "startLines": "31,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "3240,3282,3359,3397,3436,3489",
+                        "endColumns": "41,76,37,38,52,67",
+                        "endOffsets": "3277,3354,3392,3431,3484,3552"
+                    }
+                }
+            ]
+        }
+    ]
+}
