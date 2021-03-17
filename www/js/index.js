@@ -987,8 +987,8 @@ var app = {
     var firebaseConfig = {
       apiKey: "AIzaSyCOU6ZJrGaw-TM8r7dQ6Lesb8vtL_5KQEI",
       authDomain: "biblia-sagrada-acf-7355a.firebaseapp.com",
-      projectId: "biblia-sagrada-acf-7355a",
       databaseURL: "https://biblia-sagrada-acf-7355a-default-rtdb.firebaseio.com",
+      projectId: "biblia-sagrada-acf-7355a",
       storageBucket: "biblia-sagrada-acf-7355a.appspot.com",
       messagingSenderId: "421284002925",
       appId: "1:421284002925:web:713cf96add893f37c75364",
