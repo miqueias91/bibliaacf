@@ -15,10 +15,10 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
     <script type="text/javascript" src="lib/SocialSharing/SocialSharing.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
     <title>Bíblia Sagrada ACF</title>
 </head>
 
@@ -45,7 +45,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.0" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.9" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -258,10 +258,11 @@
 
 <template id="home.html">
   <ons-page>
-    <p class="intro">A Bíblia Almeida Corrigida Fiel (ACF) é uma tradução para a língua portuguesa baseada na versão de João Ferreira Annes de Almeida. A tradução Corrigida Fiel usou como base a Almeida Revista e Corrigida e tem a característica de basear-se exclusivamente no Texto Recebido (Textus Receptus) grego para o Novo Testamento e no Texto Massorético hebraico para o Antigo Testamento, que foram os mesmos textos usados por Almeida em sua tradução original.</p>
-    <p class="intro">O método de tradução utilizado é a equivalência formal, que procura manter as classes gramaticais do original para a tradução: um verbo traduzido por um verbo, um substantivo por um substantivo, e assim em diante.</p>
-    <p class="intro">A postura oficial da Sociedade Bíblica Trinitariana do Brasil, que produziu e publica esta tradução, é defendê-la como a tradução mais fiel em língua portuguesa aos textos que ela considera mais fidedignos aos originais advindo assim o termo "Fiel". Já a Sociedade Bíblica Trinitariana de língua inglesa (Trinitarian Bible Society), à qual a Sociedade Bíblica Trinitariana do Brasil está ligada, defende a versão da Bíblia King James como a mais fiel tradução da Bíblia na língua inglesa, sendo esta também traduzida a partir do Texto Recebido em grego e do Texto Massorético em hebraico. A Trinitarian Bible Society não é associada ao King-James-Only Movement internacional, e tem um ativo trabalho de tradução dos textos originais supracitados para diversas línguas através do globo.</p>
-    <p class="intro">A Almeida Corrigida Fiel foi publicada em 1994 e lançada uma revisão em 2007. No ano de 2011 uma nova edição foi publicada em consonância com o Novo Acordo Ortográfico que passou a vigorar nos países pertencentes à Comunidade dos Países de Língua Portuguesa.</p>
+    <p class="intro">Foi traduzida inicialmente pelo pastor protestante João Ferreira de Almeida. O Novo Testamento foi impresso inicialmente em 1681 e depois em 1683 pelas Companhias da Batávia. A Bíblia completa só foi impressa em 1750, 1819, e 1860 sucessivamente, depois foi revisada e corrigida pela Sociedade Bíblica Britânica e Estrangeira em Londres no ano de 1898, tendo como base a King James Bible.</p>
+
+    <p class="intro">Embora João Ferreira de Almeida terminasse o Novo Testamento em 1676, este veio a ser impresso em 1681. A impressão foi feita em Amsterdã, na Holanda, na tipografia da viúva J. V. Zomeren. O título era este: “O Novo Testamento Isto he o Novo Concerto de Nosso Fiel Senhor e Redemptor Iesu Christo traduzido na Língua Portuguesa”. Um ano depois, essa edição do Novo Testamento chegou a Batávia, mas apresentava erros de tradução e revisão. O fato foi comunicado às autoridades da Holanda e todos os exemplares que ainda não haviam saído de lá foram destruídos, por ordem da Companhia das Índias Orientais. As autoridades Holandesas determinaram que se fizesse o mesmo com os volumes que já estavam em Batávia. Pediram também que se começasse, o mais rápido possível, uma nova e cuidadosa revisão do texto.</p>
+
+    <p class="intro">Apesar das ordens recebidas da Holanda, nem todos os exemplares recebidos em Batávia foram destruídos. Alguns deles foram corrigidos à mão e enviados às congregações da região (um desses volumes pode ser visto hoje no Museu Britânico, em Londres). O trabalho de revisão e correção do Novo Testamento foi iniciado e demorou dez longos anos para ser terminado. Somente após a morte de Almeida, em 1693, é que essa segunda versão foi impressa, na própria Batávia, onde também foi distribuída. A terceira edição viria a ser publicada em 1712.</p>
     <style>
       .intro {
         text-align: justify;
@@ -297,14 +298,14 @@
       ons.getScriptPage().onInit = function () {
         app.registraAcesso('acf/versiculosMarcados.html');
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         $("#textoVersiculo").html('');
         this.querySelector('#versiculosMarcados_ div.center').textContent = 'Versículos Marcados';
         var lista_marcadores = JSON.parse(localStorage.getItem('lista-versiculos') || '[]');
         if (lista_marcadores) {
           for(var i=0; i<lista_marcadores.length; i++) {
-            app.buscaVersiculo('acf',lista_marcadores[i]['livro']+"||"+lista_marcadores[i]['num_capitulo']+"."+(parseInt(lista_marcadores[i]['num_versiculo'])+0),"textoVersiculo"); 
+            app.buscaVersiculo('nvi',lista_marcadores[i]['livro']+"||"+lista_marcadores[i]['num_capitulo']+"."+(parseInt(lista_marcadores[i]['num_versiculo'])+0),"textoVersiculo"); 
           }   
         }
       }
@@ -410,7 +411,7 @@
           };
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('acf/ajustes.html');
           modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
@@ -707,7 +708,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-          //admob.interstitial.show();
+          admob.interstitial.show();
         }
         app.registraAcesso('acf/palavraDia.html');
         $("#textoVersiculo").html('');
@@ -843,7 +844,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('acf/capitulosLidos.html');
           $("#textoCapitulosLidos").html('');
@@ -1201,7 +1202,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('acf/harpa.html');
           fn.showDialog('modal-aguarde');
@@ -1674,7 +1675,7 @@
         <script>
           ons.getScriptPage().onInit = function () {
             if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
             var dados = this.data.title.split('||'); 
             this.querySelector('#conteudoLivro_ div.center').textContent = dados[1];
@@ -2005,7 +2006,7 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('acf/conteudoHarpa.html?livro='+dados[0]);
@@ -2037,7 +2038,7 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         app.registraAcesso('acf/notificacoes.html');
         this.querySelector('#notificacoes_ div.center').textContent = 'Notificações';
@@ -2333,12 +2334,12 @@
     <script>
       ons.getScriptPage().onInit = function () {
         if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
         app.registraAcesso('acf/versoes.html');
         this.querySelector('#versoes_ div.center').textContent = 'Versões';
         if (!window.localStorage.getItem('versao-biblia')) {
-          versaoId = 'acf';
+          versaoId = 'nvi';
         }
         else{
           var versaoId = window.localStorage.getItem('versao-biblia');
@@ -2696,7 +2697,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           app.registraAcesso('acf/cantor.html');
           fn.showDialog('modal-aguarde');
@@ -2762,7 +2763,7 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            admob.interstitial.show();
+            //admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('acf/conteudoCantor.html?livro='+dados[0]);

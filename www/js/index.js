@@ -1,5 +1,5 @@
 var admobid = {}
-if (/(android)/i.test(navigator.userAgent)) {  // for android & amazon-fireos
+if (/(android)/i.test(navigator.userAgent)) {
   admobid = {
     banner: 'ca-app-pub-7091486462236476/2177687536',
     interstitial: 'ca-app-pub-7091486462236476/7737135972',
@@ -466,7 +466,7 @@ var app = {
     });
   },
   buscaVersiculoDia: function(livro_capitulo_versiculo, id) {
-    $("#"+id).html('Buscando...');
+    $("#"+id).html('');
     var selector = this;
     var texts = [];
     var dados0 = livro_capitulo_versiculo.split('||');
@@ -483,7 +483,6 @@ var app = {
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-      fn.showDialog('modal-aguarde');
       if (this.readyState == 4 && this.status == 200) {
         var data = JSON.parse(this.responseText);
         for (var i = 0; i < data.length; i++) {
@@ -502,9 +501,6 @@ var app = {
                   '</p>'+
                   '<p style="font-size: 15px;">'+livro.toUpperCase()+' '+(parseInt(capitulo)+1)+':'+(parseInt(versiculo)+1)+'</p>'+
                 '</ons-list-item>';
-        var timeoutID = 0;
-        clearTimeout(timeoutID);
-        timeoutID = setTimeout(function() { fn.hideDialog('modal-aguarde') }, 100);
         $("#"+id).html(texto);
       }
     };

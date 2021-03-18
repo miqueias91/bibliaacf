@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "421284002925",
+    "firebase_url": "https://biblia-sagrada-acf-7355a-default-rtdb.firebaseio.com",
     "project_id": "biblia-sagrada-acf-7355a",
     "storage_bucket": "biblia-sagrada-acf-7355a.appspot.com"
   },
@@ -32,7 +33,8 @@
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-7091486462236476~8743095888"
     }
   ],
   "configuration_version": "1"

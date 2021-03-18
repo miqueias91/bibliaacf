@@ -2,7 +2,7 @@
 <widget id="br.com.innovatesoft.bibliaacf" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Bíblia Sagrada ACF</name>
     <description>
-        A Bíblia Almeida Corrigida Fiel (ACF) é uma tradução para a língua portuguesa baseada na versão de João Ferreira Annes de Almeida.
+        Bíblia Sagrada ACF é uma versão Revisada da Tradução de João Ferreira de Almeida de Acordo os Melhores Textos em Hebraico e Grego.
     </description>
     <author email="miqueiasmcaetano@gmail.com" href="https://www.innovatesoft.com.br/">
         Innovate Soft
@@ -69,4 +69,5 @@
     <plugin name="cordova-plugin-x-socialsharing" spec="5.6.4" />
     <plugin name="cordova-plugin-insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="^2.4.1" />
+    <engine name="android" />
 </widget>
