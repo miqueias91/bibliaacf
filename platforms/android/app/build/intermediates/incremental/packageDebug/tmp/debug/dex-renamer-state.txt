@@ -1,7 +1,7 @@
-#Fri Apr 02 19:37:32 BRT 2021
-base.0=/var/www/app/android/bibliaacf/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
+#Wed May 12 12:00:35 BRT 2021
 base.1=/var/www/app/android/bibliaacf/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes2.dex
+path.1=classes2.dex
+base.0=/var/www/app/android/bibliaacf/platforms/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
