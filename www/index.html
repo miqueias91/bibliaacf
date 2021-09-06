@@ -48,7 +48,7 @@
       </div>
     </ons-toolbar>
     <ons-tabbar swipeable id="appTabbar" position="bottom">
-        <ons-tab label="Versão 1.0.6" page="home.html" active></ons-tab>
+        <ons-tab label="Versão 1.0.7" page="home.html" active></ons-tab>
     </ons-tabbar>
 
     <script>
@@ -185,6 +185,18 @@
         </div>
       </ons-list-item>
 
+      <ons-list-item onclick="fn.loadLink('https://www.cristaonarede.com.br/loja.php')">
+        <div class="left">
+            <i class="fas fa-store"></i>
+        </div>
+        <div class="center">
+          Loja
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+
       <ons-list-item onclick="fn.loadLink('https://www.instagram.com/cristao.narede/')">
         <div class="left">
             <i class="fab fa-instagram"></i>
@@ -225,10 +237,11 @@
       }
 
       .profile-pic > img {
-        width: 60px;
+        width: 50px;
         display: block;
         max-width: 100%;
         margin: 0 auto;
+        padding: 10px;
       }
 
       ons-list-item {
@@ -472,7 +485,7 @@
       <span id="mensagemMinhasInformacoes"><p class="intro">Você está usando a versão FREE.</p></span>
       <br><br>
       <div class="profile-pic">
-        <img class="avatar" src="img/logo.png">
+        <img class="avatar" src="img/logo.png" style="width: 50px!important;background-color: transparent;margin: 0 auto;padding: 0!important;">
       </div>
       <p><ons-input style="width: 90%;margin-bottom: 20px;" id="token" placeholder="Token:" modifier="underbar" type="text" float disabled></ons-input></p>
       <p><ons-input style="width: 90%;margin-bottom: 20px;" id="nome" placeholder="Seu Nome:" modifier="underbar" type="text" float></ons-input></p>
@@ -628,12 +641,12 @@
       .profile-pic {
         background-color: transparent;
       }
-      .profile-pic > img {
+     .profile-pic > img {
         width: 50px!important;
+        height: auto!important;
         background-color: transparent;
         margin: 0 auto;
         padding: 0!important;
-        height: auto;
       }
     </style>
   </ons-page>
@@ -1048,7 +1061,7 @@
     <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            //admob.interstitial.show();
+            admob.interstitial.show();
           }
           app.registraAcesso('acf/listaFavoritosHinario.html');
           fn.showDialog('modal-aguarde');
@@ -2203,7 +2216,7 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            //admob.interstitial.show();
+            admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('acf/conteudoHarpa.html?livro='+dados[0]);
@@ -2976,7 +2989,7 @@
         <script>
         ons.getScriptPage().onInit = function () {
           if (window.localStorage.getItem("versao_pro") === 'NAO') {
-            //admob.interstitial.show();
+            admob.interstitial.show();
           }
           var dados = this.data.title.split('||'); 
           app.registraAcesso('acf/conteudoCantor.html?livro='+dados[0]);
